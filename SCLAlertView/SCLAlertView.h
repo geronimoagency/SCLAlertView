@@ -19,7 +19,7 @@ typedef NSAttributedString* (^SCLAttributedFormatBlock)(NSString *value);
 typedef void (^SCLDismissBlock)(void);
 typedef void (^SCLForceHideBlock)(void);
 
-@interface SCLAlertView : UIViewController 
+@interface SCLAlertView : UIViewController
 
 /** Alert Styles
  *
@@ -100,7 +100,7 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
  * (Default: NO)
  */
 @property BOOL useLargerIcon;
-    
+
 /** Title Label
  *
  * The text displayed as title.
@@ -428,6 +428,10 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
  * @param duration The amount of time the alert will remain on screen until it is automatically dismissed. If automatic dismissal is not desired, set to 0.
  */
 - (void)showCustom:(UIViewController *)vc image:(UIImage *)image color:(UIColor *)color title:(NSString *)title subTitle:(NSString *)subTitle closeButtonTitle:(NSString *)closeButtonTitle duration:(NSTimeInterval)duration;
+
+- (void)showCustom:(UIViewController *)vc image:(UIImage *)image color:(UIColor *)color title:(NSString *)title subTitle:(NSString *)subTitle duration:(NSTimeInterval)duration;
+
+
 - (void)showCustom:(UIImage *)image color:(UIColor *)color title:(NSString *)title subTitle:(NSString *)subTitle closeButtonTitle:(NSString *)closeButtonTitle duration:(NSTimeInterval)duration;
 
 /** Show Waiting SCLAlertView with UIActityIndicator.
